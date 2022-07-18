@@ -1,13 +1,16 @@
 import React from "react";
-import "./App.css";
+import { Provider } from "react-redux";
+import Cart from "./components/Cart";
+import Catalog from "./components/Catalog";
+import store from "./store";
 
 function App() {
   return (
-    <div className="App">
-      <p>começamo</p>
-    </div>
+    <Provider store={store}>
+      <Catalog />
+      <Cart />
+    </Provider>
   );
 }
 
 export default App;
- 
